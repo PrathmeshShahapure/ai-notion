@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import {
-  ClerkProvider,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +33,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-mono max-w-7xl mx-auto">
         <ClerkProvider>
           <Header />
+          <div className="flex  min-h-screen gap-2">
+            <div>
+              <Sidebar/>
+            </div>
 
-          {children}
+            <div className="flex-1 bg-gray-100 overflow-y-auto scrollbar-hidden">{children}</div>
+          </div>
         </ClerkProvider>
       </body>
     </html>

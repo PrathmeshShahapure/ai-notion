@@ -6,7 +6,6 @@ const Header = () => {
   const { user } = useUser();
   return (
     <div className="flex justify-between items-center p-4 gap-4 h-16">
-      {" "}
       <div>{user && <h1>{user?.firstName}`s Space </h1>}</div>
       <div></div>
       <div className="flex gap-4">
