@@ -50,10 +50,6 @@ const Sidebar = () => {
       owner: RoomDocument[];
       editor: RoomDocument[];
     }>((acc, curr) => {
-      console.log(data)
-      console.log(data.docs)
-      console.log(curr);
-      console.log(curr.data());
       const roomData = curr.data() as RoomDocument; 
       if (roomData.role === "owner") {
         acc.owner.push({ id: curr.id, ...roomData });

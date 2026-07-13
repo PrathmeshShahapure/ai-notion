@@ -35,10 +35,12 @@ export default function RootLayout({
           <Header />
           <div className="flex  min-h-screen gap-2">
             <div>
-              <Sidebar/>
+              <Sidebar />
             </div>
 
-            <div className="flex-1 bg-gray-100 overflow-y-auto scrollbar-hidden">{children}</div>
+            <div className="flex-1 bg-cyan-100 shadow-lg shadow-cyan-500/50  m-4 overflow-y-auto scrollbar-hidden rounded-lg">
+              {children}
+            </div>
           </div>
         </ClerkProvider>
       </body>
